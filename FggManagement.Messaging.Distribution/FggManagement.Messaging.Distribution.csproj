@@ -5,10 +5,13 @@
     <Description>Distribution transaction framework which based on RabbitMQ/Redis</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Copyright>FggManagement</Copyright>
-    <AssemblyVersion>1.0.0.2</AssemblyVersion>
-    <FileVersion>1.0.0.2</FileVersion>
+    <AssemblyVersion>1.0.0.3</AssemblyVersion>
+    <FileVersion>1.0.0.3</FileVersion>
+    <PackageLicenseUrl>https://github.com/moonncat/FggManagement.Messaging.Distribution</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/moonncat/FggManagement.Messaging.Distribution</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/moonncat/FggManagement.Messaging.Distribution</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

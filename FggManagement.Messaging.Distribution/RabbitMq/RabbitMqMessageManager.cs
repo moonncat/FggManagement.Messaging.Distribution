@@ -8,7 +8,7 @@ using RabbitMQ.Client.Events;
 
 namespace FggManagement.Messaging.Distribution.RabbitMq
 {
-    public class RabbitMqMessageManager : IMessageManager
+    public class RabbitMqMessageManager : IMessageManager, IDisposable
     {
         public RabbitMqMessageManager(string host)
         {
@@ -89,5 +89,12 @@ namespace FggManagement.Messaging.Distribution.RabbitMq
             }
         }
 
+        public void Dispose()
+        {
+            if (this.connection != null && this.connection.IsOpen)
+            {
+                this.connection.Close();
+            }
+        }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FggManagement.Messaging.Distribution.Redis
 {
-    public class RedisMessageManager : IMessageManager
+    public class RedisMessageManager : IMessageManager, IDisposable
     {
         public RedisMessageManager(string host)
         {
@@ -67,5 +67,12 @@ namespace FggManagement.Messaging.Distribution.Redis
             return this.Publish(routingKey, message);
         }
 
+        public void Dispose()
+        {
+            if (this.connection != null && this.connection.IsConnected)
+            {
+                this.connection.Close();
+            }
+        }
     }
 }
